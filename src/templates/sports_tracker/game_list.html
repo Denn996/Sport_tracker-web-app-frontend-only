@@ -4,13 +4,13 @@
     <h1 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">All Tracked Sports</h1>
     
     <ul style="list-style-type: none; padding: 0;">
-        {% for item in items %}
+        {% for game in games %}
             <li style="background: #f9f9f9; margin-bottom: 10px; padding: 15px; border-radius: 5px; border-left: 4px solid #3498db;">
-                <a href="{% url 'sports_tracker:item_detail' item.id %}" style="text-decoration: none; color: #2c3e50; font-size: 1.2em; font-weight: bold;">
-                    {{ item.name }}
+                <a href="{% url 'sports_tracker:game_detail' game.id %}" style="text-decoration: none; color: #2c3e50; font-size: 1.2em; font-weight: bold;">
+                    {{ game.name }}
                 </a>
                 <span style="float: right; color: #888; font-size: 0.9em;">
-                    Added: {{ item.date_added|date:"M d, Y" }}
+                    Added: {{ game.date_added|date:"M d, Y" }}
                 </span>
             </li>
         {% empty %}

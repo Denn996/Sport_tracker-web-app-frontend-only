@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="text-align: center; padding: 40px 0;">
+        <h1>Welcome to Your Sports Tracker</h1>
+        <p style="font-size: 1.1em; color: #555;">
+            Keep track of all your favorite sports, teams, and athletic events in one centralized location.
+        </p>
+        <br>
+        <a href="{% url 'sports_tracker:item_list' %}" style="background-color: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            View All Tracked Sports
+        </a>
+    </div>
+{% endblock %}
